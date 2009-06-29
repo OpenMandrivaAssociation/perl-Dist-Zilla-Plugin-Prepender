@@ -1,5 +1,5 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 0.1.1
+%define upstream_version 0.2.0
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
