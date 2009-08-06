@@ -1,5 +1,5 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 0.2.0
+%define upstream_version 0.2.1
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -27,7 +27,6 @@ This is useful to enforce a set of pragmas to your files (since pragmas
 are lexical, they will be active for the whole file), or to add some
 copyright comments, as the fsf recommends.
 
-
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 
@@ -50,4 +49,3 @@ rm -rf %buildroot
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
