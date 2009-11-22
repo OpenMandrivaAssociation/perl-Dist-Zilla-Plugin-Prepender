@@ -13,8 +13,9 @@ Source0:    http://search.cpan.org/CPAN/authors/id/J/JQ/JQUELIN/%{upstream_name}
 
 BuildRequires: perl(Dist::Zilla)
 BuildRequires: perl(Moose)
-BuildRequires: perl(File::Find::Rule)
+BuildRequires: perl(MooseX::Has::Sugar)
 BuildRequires: perl(Test::More)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
