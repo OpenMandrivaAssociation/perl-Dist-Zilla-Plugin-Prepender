@@ -1,5 +1,5 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 1.093190
+%define upstream_version 1.100130
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -32,15 +32,15 @@ copyright comments, as the fsf recommends.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
-make test
+./Build test
 
 %install
-rm -rf %buildroot
-%makeinstall_std
+%{__rm} -rf %{buildroot}
+./Build install destdir=%{buildroot}
 
 %clean
 rm -rf %buildroot
