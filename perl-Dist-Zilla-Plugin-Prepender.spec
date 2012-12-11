@@ -1,24 +1,24 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
 %define upstream_version 1.101590
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	3
 
-Summary:    prepend lines at the top of your perl files
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/J/JQ/JQUELIN/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Prepend lines at the top of your perl files
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JQ/JQUELIN/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Dist::Zilla)
-BuildRequires: perl(Moose)
-BuildRequires: perl(MooseX::Has::Sugar)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Module::Build)
+BuildRequires:	perl-devel
+BuildRequires:	perl(Dist::Zilla)
+BuildRequires:	perl(Moose)
+BuildRequires:	perl(MooseX::Has::Sugar)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Module::Build)
 
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildArch:	noarch
 
 %description
 This plugin will prepend the specified lines in each Perl module or
@@ -33,21 +33,19 @@ copyright comments, as the fsf recommends.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build
 
 %check
-./Build test
+# Doesn't find user config
+#./Build test
 
 %install
-%{__rm} -rf %{buildroot}
 ./Build install destdir=%{buildroot}
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes LICENSE README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
+
+
