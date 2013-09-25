@@ -1,15 +1,15 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 1.101590
+%define upstream_version 1.112280
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Prepend lines at the top of your perl files
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JQ/JQUELIN/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/authors/id/J/JQ/JQUELIN/Dist-Zilla-Plugin-Prepender-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Dist::Zilla)
@@ -47,5 +47,6 @@ perl Build.PL installdirs=vendor
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
 
 

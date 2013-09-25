@@ -1,2 +1,4 @@
+removed_sources:
+  Dist-Zilla-Plugin-Prepender-1.101590.tar.gz: 76894d0ae826ce9b407f9f655accab9fb29bca9c
 sources:
-  "Dist-Zilla-Plugin-Prepender-1.101590.tar.gz": 76894d0ae826ce9b407f9f655accab9fb29bca9c
+  Dist-Zilla-Plugin-Prepender-1.112280.tar.gz: bbe7b7c1d6da506dfd0ec3c0715f7f1bab86ff11
