@@ -8,7 +8,7 @@ Release:	3
 Summary:	Prepend lines at the top of your perl files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/authors/id/J/JQ/JQUELIN/Dist-Zilla-Plugin-Prepender-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
