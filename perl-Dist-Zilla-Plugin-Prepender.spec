@@ -1,15 +1,15 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 1.112280
+%define upstream_version 2.004
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Prepend lines at the top of your perl files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/authors/id/J/JQ/JQUELIN/Dist-Zilla-Plugin-Prepender-%{upstream_version}.tar.gz
+Url:		https://github.com/karenetheridge/Dist-Zilla-Plugin-Prepender
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Prepender-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Dist::Zilla)
