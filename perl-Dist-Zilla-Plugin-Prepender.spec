@@ -1,15 +1,13 @@
 %define upstream_name    Dist-Zilla-Plugin-Prepender
-%define upstream_version 2.004
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.004
+Release:	2
 
 Summary:	Prepend lines at the top of your perl files
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Dist-Zilla-Plugin-Prepender
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Prepender-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Prepender-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Dist::Zilla)
@@ -30,7 +28,7 @@ are lexical, they will be active for the whole file), or to add some
 copyright comments, as the fsf recommends.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
